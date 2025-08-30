@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Keluarga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Database Keluarga</h1>
+
+  <h2>Form Tambah Keluarga</h2>
+  <form id="formKeluarga">
+    <input type="text" id="namaKepala" placeholder="Nama Kepala Keluarga" required>
+    <input type="text" id="alamat" placeholder="Alamat" required>
+    <select id="status" required>
+      <option value="sama">KK = Domisili</option>
+      <option value="diluar">Tinggal di Luar Wilayah</option>
+      <option value="bukan">Bukan KK setempat</option>
+    </select>
+    <input type="text" id="koordinat" placeholder="Koordinat Rumah" required>
+    <button type="submit">Tambah Keluarga</button>
+  </form>
+
+  <h2>List Keluarga</h2>
+  <ul id="keluargaList"></ul>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
