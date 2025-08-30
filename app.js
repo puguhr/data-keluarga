@@ -1,7 +1,17 @@
 // app.js
-const CLIENT_ID = 'YOUR_CLIENT_ID.apps.googleusercontent.com';
-const API_KEY = 'YOUR_API_KEY';
-const SHEET_ID = 'YOUR_SHEET_ID';
+
+// Menggunakan dotenv untuk mengakses file .env
+require('dotenv').config();
+
+// Mengambil nilai dari .env
+const CLIENT_ID = process.env.CLIENT_ID;
+const API_KEY = process.env.API_KEY;
+const SHEET_ID = process.env.SHEET_ID;
+
+console.log('Client ID:', CLIENT_ID);
+console.log('API Key:', API_KEY);
+console.log('Sheet ID:', SHEET_ID);
+
 const DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
 const SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly https://www.googleapis.com/auth/spreadsheets";
 
